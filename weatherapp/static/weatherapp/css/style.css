@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("../images/weather.jpg");
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+}
+form{
+    max-width: 35rem;
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.1 );
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.icon{
+    width: 80px;
+}
+.temp{
+    font-size: 65px;
+}
+.card-div{
+    height: 20rem;
+    max-width: 20rem;
+    /* box-shadow: 1px 5px 5px grey; */
+    display: grid;
+    grid-template-rows: 55% 30% 13%;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
