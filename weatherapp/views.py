@@ -7,7 +7,7 @@ from .models import City
 
 def index(request):
     API_KEY = config("API_KEY")
-    city = "Erzurum"
+    # city = "Erzurum"
     u_city = request.POST.get("name")
     
     if u_city:
@@ -19,12 +19,12 @@ def index(request):
             content = response.json()
             r_city = content["name"]
             if City.objects.filter(name=r_city):
-                messages.warning(request, f"{city} already exists!")
+                messages.warning(request, f"{u_city.upper()} already exists!")
             else:
                 City.objects.create(name=r_city)
             
         else:
-            messages.warning(request, f"There is no city called {city}")
+            messages.warning(request, f"There is no city called {u_city.upper()}")
     
     
     city_data = []
